@@ -1,78 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Login & Signup Form | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div class="wrapper">
-      <div class="title-text">
-        <div class="title login">Login Form</div>
-        <div class="title signup">Signup Form</div>
-      </div>
-      <div class="form-container">
-        <div class="slide-controls">
-          <input type="radio" name="slide" id="login" checked>
-          <input type="radio" name="slide" id="signup">
-          <label for="login" class="slide login">Login</label>
-          <label for="signup" class="slide signup">Signup</label>
-          <div class="slider-tab"></div>
-        </div>
-        <div class="form-inner">
-          <form action="#" class="login">
-            <div class="field">
-              <input type="text" placeholder="Email Address" required>
+    <title>Login Form Animation CSS | Codehal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="login-light"></div>
+    <div class="login-box">
+        <form action="#">
+            <input type="checkbox" class="input-check" id="input-check">
+            <label for="input-check" class="toggle">
+                <span class="text off">off</span>
+                <span class="text on">on</span>
+            </label>
+            <div class="light"></div>
+
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label>Email</label>
+                <div class="input-line"></div>
             </div>
-            <div class="field">
-              <input type="password" placeholder="Password" required>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label>Password</label>
+                <div class="input-line"></div>
             </div>
-            <div class="pass-link"><a href="#">Forgot password?</a></div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Login">
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
             </div>
-            <div class="signup-link">Not a member? <a href="">Signup now</a></div>
-          </form>
-          <form action="#" class="signup">
-            <div class="field">
-              <input type="text" placeholder="Email Address" required>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
             </div>
-            <div class="field">
-              <input type="password" placeholder="Password" required>
-            </div>
-            <div class="field">
-              <input type="password" placeholder="Confirm password" required>
-            </div>
-            <div class="field btn">
-              <div class="btn-layer"></div>
-              <input type="submit" value="Signup">
-            </div>
-          </form>
-        </div>
-      </div>
+        </form>
     </div>
 
-    <script>
-      const loginText = document.querySelector(".title-text .login");
-      const loginForm = document.querySelector("form.login");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector("form .signup-link a");
-      signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "-50%";
-        loginText.style.marginLeft = "-50%";
-      });
-      loginBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "0%";
-        loginText.style.marginLeft = "0%";
-      });
-      signupLink.onclick = (()=>{
-        signupBtn.click();
-        return false;
-      });
-    </script>
 
-  </body>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
 </html>
